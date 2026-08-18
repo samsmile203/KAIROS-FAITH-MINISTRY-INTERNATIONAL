@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Upcoming events at Kairos Faith Ministry International including conferences, prayer meetings, and worship gatherings." />
+  <meta name="theme-color" content="#5A2CA0" />
+  <title>Events | Karios Faith Ministry International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
+        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <span>Karios Faith Ministry International</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#ministries">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a class="active" href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="giving.html">Give</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-gold" href="contact.html">Join Us</a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container hero-inner">
+        <span>Event Calendar</span>
+        <h1>Join Our Upcoming Events</h1>
+        <p>Discover conferences, prayer nights, worship gatherings, and ministry meetings designed to deepen your faith and connect you with our church family.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Upcoming Events</h2>
+          <p>Join us as we gather for worship, prayer, conferences, and life-changing fellowship.</p>
+        </div>
+        <div class="timeline">
+          <article class="event-card glass reveal">
+            <h3>Global Leadership Conference</h3>
+            <p>August 24 • 9:00 AM • Main Sanctuary</p>
+            <p>Experience a time of teaching, empowerment, and strategic kingdom impact.</p>
+          </article>
+          <article class="event-card glass reveal">
+            <h3>Midweek Prayer Meeting</h3>
+            <p>Every Wednesday • 6:30 PM</p>
+            <p>Join the church in fervent prayer for revival, healing, and nationwide transformation.</p>
+          </article>
+          <article class="event-card glass reveal">
+            <h3>Sunday Celebration Service</h3>
+            <p>Every Sunday • 8:00 AM & 10:30 AM</p>
+            <p>Worship, the Word, and a warm welcome for everyone visiting the church.</p>
+          </article>
+          <article class="event-card glass reveal">
+            <h3>Bible Study & Discipleship</h3>
+            <p>Sunday • 5:00 PM</p>
+            <p>Deepen your understanding of scripture and grow in spiritual maturity.</p>
+          </article>
+          <article class="event-card glass reveal">
+            <h3>Youth Night of Worship</h3>
+            <p>...... PM</p>
+            <p>A vibrant evening of music, prayer, and young people gathering in faith.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          <h3>Kairos Faith Ministry International</h3>
+          <p>Faith, excellence, peace, and hope for every generation.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Email address" />
+            <button class="btn btn-gold" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Kairos Faith Ministry International. “God's time is my time.”</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>

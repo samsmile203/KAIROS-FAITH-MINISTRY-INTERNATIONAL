@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Give to Kairos Faith Ministry International and support ministry, outreach, and community impact." />
+  <meta name="theme-color" content="#5A2CA0" />
+  <title>Give | Kairos Faith Ministry International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
+        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <span>Kairos Faith Ministry International</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#ministries">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="giving.html">Give</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-gold" href="contact.html">Join Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container hero-inner">
+        <span>Give</span>
+        <h1>Your generosity powers ministry, outreach, and hope.</h1>
+        <p>Thank you for partnering with Kairos Faith Ministry International. Your support helps transform lives, feed communities, and expand the reach of the gospel.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#give-options">Give Now</a>
+          <a class="btn btn-gold" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="give-options">
+      <div class="container">
+        <div class="section-title">
+          <h2>Ways to Give</h2>
+          <p>Choose the giving option that fits your heart for ministry and see how your gift makes a difference across worship, outreach, compassion, and community support.</p>
+        </div>
+
+        <div class="giving-grid">
+          <article class="glass giving-card">
+            <h3>Tithes</h3>
+            <div class="amount"></div>
+            <p>Champion the ongoing work of the church by supporting biblical stewardship, worship experiences, and ministry operations.</p>
+          </article>
+
+          <article class="glass giving-card">
+            <h3>Offerings</h3>
+            <div class="amount"></div>
+            <p>Provide flexible support for conferences, church events, and strategic ministry initiatives that bless our congregation and city.</p>
+          </article>
+
+          <article class="glass giving-card">
+            <h3>Donations</h3>
+            <div class="amount"></div>
+            <p>Supply urgent needs and compassionate outreach by helping families, students, and vulnerable neighbors in our community.</p>
+          </article>
+
+          <article class="glass giving-card">
+            <h3>Mission Support</h3>
+            <div class="amount"></div>
+            <p>Fuel local and global evangelism, discipleship, and transformational ministry projects led by Kairos Faith Ministry International.</p>
+          </article>
+        </div>
+
+        <div class="giving-summary">
+          <article class="glass">
+            <h3>How Your Gift Works</h3>
+            <p>Your giving helps us:</p>
+            <ul>
+              <li>Provide worship experiences and pastoral care.</li>
+              <li>Support outreach events, prayer ministries, and local missions.</li>
+              <li>Resource children, youth, and family discipleship programs.</li>
+              <li>Care for the vulnerable through food, counseling, and practical support.</li>
+            </ul>
+          </article>
+
+          <article class="glass">
+            <h3>Giving Options</h3>
+            <p>Choose the easiest way to give today:</p>
+            <ul>
+              <li>Online giving via secure church portal.</li>
+              <li>Bank transfer for recurring tithes and offerings.</li>
+              <li>In-person gifts during Sunday worship or ministry events.</li>
+              <li>Partnerships for long-term missions and relief work.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          <h3>Kairos Faith Ministry International</h3>
+          <p>Faith, excellence, peace, and hope for every generation.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Social</h4>
+          <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">X</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Email address" />
+            <button class="btn btn-gold" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2026 Kairos Faith Ministry International. “Give, and it will be given to you.” Luke 6:38</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+</body>
+</html>

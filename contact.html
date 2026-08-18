@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Kairos Faith Ministry International for prayer, service details, and church information." />
+  <meta name="theme-color" content="#5A2CA0" />
+  <title>Contact | Kairos Faith Ministry International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
+        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <span>Kairos Faith Ministry International</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#ministries">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="giving.html">Give</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-gold" href="contact.html">Join Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container hero-inner">
+        <span>Contact Us</span>
+        <h1>We would love to hear from you.</h1>
+        <p>Reach out for prayer, service details, visitation information, or to connect with our church family.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Get in Touch</h2>
+          <p>We are here to welcome you, answer your questions, and help you plan your visit.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card glass reveal">
+            <form class="contact-form" id="contactForm" novalidate>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="tel" name="phone" placeholder="Phone Number" />
+              <textarea name="message" rows="5" placeholder="How can we assist you?" required></textarea>
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <p id="formMessage" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="contact-card glass reveal">
+            <div class="contact-details">
+              <div class="detail-item">
+                <div>
+                  <strong>Address</strong>
+                  <p>Koforidua Okorase</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div>
+                  <strong>Phone</strong>
+                  <p>+233 500079389</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div>
+                  <strong>Email</strong>
+                  <p>kairosfaithministryinternation@gmail.com</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div>
+                  <strong>Service Times</strong>
+                  <p>Sunday 9:00 AM to 11:00 AM<br />Wednesday 6:30 PM to 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="map">
+              <iframe src="https://maps.app.goo.gl/1NY7yinbUhmiEVo16?g_st=aw" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Church location map"></iframe>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Email address" />
+            <button class="btn btn-gold" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Kairos Faith Ministry International. “God's time is my time.”</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    contactForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(contactForm);
+      const name = data.get('name').toString().trim();
+      const email = data.get('email').toString().trim();
+      const message = data.get('message').toString().trim();
+      if (!name || !email || !message) {
+        formMessage.textContent = 'Please complete the required fields.';
+        formMessage.style.color = '#b42318';
+        return;
+      }
+      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!validEmail) {
+        formMessage.textContent = 'Please enter a valid email address.';
+        formMessage.style.color = '#b42318';
+        return;
+      }
+      formMessage.textContent = 'Thank you for reaching out. We will be in touch shortly.';
+      formMessage.style.color = '#1a8f5b';
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn more about Kairos Faith Ministry International, our vision, mission, and values." />
+  <meta name="theme-color" content="#5A2CA0" />
+  <title>About | Kairos Faith Ministry International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
+        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <span>Kairos Faith Ministry International</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="index.html#ministries">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="giving.html">Give</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-gold" href="contact.html">Join Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container hero-inner">
+        <span>About Us</span>
+        <h1>Serving God, building lives, and reaching the world with hope.</h1>
+        <p>We are a vibrant church family committed to spiritual growth, worship, prayer, and the transformation of lives through the power of God’s Word.</p>
+      </div>
+    </section>
+
+    <section class="section mission-vision-wrap" id="about">
+      <div class="container">
+        <h2 class="mission-vision-heading reveal"> Vision and Mission</h2>
+
+      
+
+        <div class="mission-block reveal">
+          <h3>Our Vision</h3>
+          <p class="mission-vision-sentence">We exist to make disciples of Jesus Christ, help them discover their God given  purpose, deepen their faith, and experience the peace of God in a welcoming and uplifting environment.</p>
+          
+             <div class="mission-block reveal">
+          <h3>Our Mission</h3>
+        </div>
+           <ul class="mission-list">
+            <li>To empower believers by the preaching of the Word of faith.(Hebrews 11:6)</li>
+            <li>To build up a generation of believers who undertands times and seasons.(1 Chronicles 12:32).</li>
+            <li>To raise leaders for the body of Christ.(2 Timothy 2:2)</li>
+            <li>To bring people to the foreknowledge of the ministry of the Holy Spirit.(John 16:13-15)</li>
+            <li>To extend helping hand to the needy in the society.(Matthew 25:36)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Email address" />
+            <button class="btn btn-gold" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Kairos Faith Ministry International. “God's time is my time.”</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>

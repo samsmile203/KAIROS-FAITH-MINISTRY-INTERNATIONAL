@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kairos Faith Ministry International is a modern church community dedicated to faith, worship, prayer, and spiritual growth." />
+  <meta name="theme-color" content="#5A2CA0" />
+  <title>Kairos Faith Ministry International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Kairos Faith Ministry International home">
+        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <span>Kairos Faith Ministry International</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+         <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-gold" href="contact.html">Join Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="floating-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="container hero-content">
+        <div class="reveal">
+          <div class="hero-badge">Faith • Hope • Love</div>
+          <h1>Welcome to Kairos Faith Ministry International</h1>
+          <p>Transforming lives through the power of God's Word, worship, prayer, and love. A modern, compassionate church family committed to spiritual growth and excellence.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#live">Watch Live</a>
+            <a class="btn btn-outline" href="contact.html">Plan Your Visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="container story-layout">
+        <div class="story-photos reveal">
+          <img src="image/both.jpeg" alt="Pastor Isaac Kansan and Lady Sarah Kansan" class="story-photo story-photo-full" />
+        </div>
+
+        <div class="story-copy reveal">
+          <h2>Welcome to Kairos Faith Ministry International</h2>
+          <h3>Where Lives Are Transformed</h3>
+
+          <p>Welcome to Kairos Faith Ministry International (KFMI), a believing charismatic church where the Word of God is taught with accuracy, and the power of the Holy Spirit is demonstrated.</p>
+
+          <p>Kairos Faith Ministry International was founded in 2025 by Rev. Isaac Kansan and Lady Mrs. Sarah Kansan with a passion to see lives transformed through the Gospel of Jesus Christ.</p>
+
+          <p>Our vision is to make disciples of Christ who will positively influence every sphere of life, bringing the light of the Gospel into families, education, media, government, business, arts and entertainment, and other areas of society.</p>
+
+          <p>Located in Koforidua - Okorase, KFMI is committed to raising believers who know the Word, walk by faith, and demonstrate the life and power of the Holy Spirit.</p>
+
+          <p>As we grow, we look forward to planting daughter churches in the near future, extending the Gospel and impacting communities for Christ.</p>
+
+          <p class="story-closing">Kairos Faith Ministry International — Where Lives Are Transformed.</p>
+        </div>
+      </div>
+
+      <div class="container promo-row reveal">
+        <div class="promo-card">
+          <img src="image/theme.jpeg" alt="Theme of the year" />
+        </div>
+        <div class="promo-card">
+          <img src="image/service.jpeg" alt="Service announcement" />
+        </div>
+        <div class="promo-card">
+          <img src="image/para.jpeg" alt="Prayer or special event" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          <h3>Kairos Faith Ministry International</h3>
+          <p>God's Time Is My Time.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="#ministries">Ministries</a>
+            <a href="events.html">Events</a>
+            <a href="giving.html">Give</a>
+          </div>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">X</a>
+          </div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Email address" />
+            <button class="btn btn-gold" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Kairos Faith Ministry International. “Be strong and take heart, all you who hope in the Lord.” Psalm 31:24</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+  <div class="modal" id="imageModal" aria-label="Image preview">
+    <button type="button" id="closeModal">×</button>
+    <img id="modalImage" src="" alt="Expanded gallery preview" />
+  </div>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    document.querySelectorAll('.gallery-card img, .leadership-image').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        modal.classList.add('open');
+      });
+    });
+    document.getElementById('closeModal')?.addEventListener('click', () => modal?.classList.remove('open'));
+    modal?.addEventListener('click', (event) => {
+      if (event.target === modal) modal.classList.remove('open');
+    });
+
+    const countdownDate = new Date();
+    countdownDate.setDate(countdownDate.getDate() + 6);
+    countdownDate.setHours(10, 30, 0, 0);
+    setInterval(() => {
+      const now = new Date();
+      const diff = countdownDate - now;
+      if (diff <= 0) return;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }, 1000);
+  </script>
+</body>
+</html>
