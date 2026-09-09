@@ -13,17 +13,19 @@
    
 </head>
 <body>
-  
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="navbar">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
-        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
         <span>Kairos Faith Ministry International</span>
-      </a>      <nav class="nav-links" aria-label="Primary navigation">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">&#9776;</button>
+      <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="events.html">Events</a>
-        <a href="gallery.html">Gallery</a>
+        <a class="active" href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -31,7 +33,7 @@
       </div>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section class="page-hero">
       <div class="container hero-inner">
         <span>Gallery</span>
@@ -57,5 +59,13 @@
     </div>
   </footer>
   <script src="gallery.js"></script>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
 </body>
 </html>

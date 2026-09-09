@@ -1,0 +1,26 @@
+{
+  "name": "kfmi",
+  "version": "1.0.0",
+  "description": "\"# Kairos-Faith-Ministry\" \r \"# Kairos-Faith-Ministry\" \r #\u0000 \u0000K\u0000a\u0000i\u0000r\u0000o\u0000s\u0000-\u0000F\u0000a\u0000i\u0000t\u0000h\u0000-\u0000M\u0000i\u0000n\u0000i\u0000s\u0000t\u0000r\u0000y\u0000\r\u0000 \u0000\"# Kairos-Faith-Ministry\"",
+  "main": "gallery.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsmile203/Kairos-Faith-Ministry.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/samsmile203/Kairos-Faith-Ministry/issues"
+  },
+  "homepage": "https://github.com/samsmile203/Kairos-Faith-Ministry#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

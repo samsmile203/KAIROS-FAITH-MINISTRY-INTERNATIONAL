@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,14 +17,14 @@
   <header class="navbar">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
-        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
         <span>Kairos Faith Ministry International</span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">&#9776;</button>
       <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="index.html#ministries">Ministries</a>
+        <a href="about.html#about">Ministries</a>
         <a href="sermons.html">Sermons</a>
         <a href="events.html">Events</a>
         <a href="gallery.html">Gallery</a>
@@ -53,13 +54,22 @@
         </div>
         <div class="contact-grid">
           <article class="contact-card glass reveal">
-            <form class="contact-form" id="contactForm" novalidate>
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <input type="tel" name="phone" placeholder="Phone Number" />
-              <textarea name="message" rows="5" placeholder="How can we assist you?" required></textarea>
-              <button class="btn btn-primary" type="submit">Send Message</button>
-              <p id="formMessage" aria-live="polite"></p>
+            <form class="contact-form" id="contactForm">
+              <div class="honeypot" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="Your Email" autocomplete="email" required />
+              <label for="phone">Phone number <span>(optional)</span></label>
+              <input id="phone" type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" />
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us how we can assist you." required></textarea>
+              <button class="btn btn-primary" id="submitButton" type="submit">Send Message</button>
+              <p class="form-note">We usually respond within 24–48 hours.</p>
+              <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
             </form>
           </article>
           <article class="contact-card glass reveal">
@@ -73,13 +83,13 @@
               <div class="detail-item">
                 <div>
                   <strong>Phone</strong>
-                  <p>+233 500079389</p>
+                  <p><a href="tel:+233500079389">+233 500 079 389</a></p>
                 </div>
               </div>
               <div class="detail-item">
                 <div>
                   <strong>Email</strong>
-                  <p>kairosfaithministryinternation@gmail.com</p>
+                  <p><a href="mailto:kairosfaithministryinternation@gmail.com">kairosfaithministryinternation@gmail.com</a></p>
                 </div>
               </div>
               <div class="detail-item">
@@ -89,8 +99,16 @@
                 </div>
               </div>
             </div>
+            <a class="contact-whatsapp" href="https://wa.me/233500079389" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Chat with us on WhatsApp
+            </a>
             <div class="map">
-              <iframe src="https://maps.app.goo.gl/1NY7yinbUhmiEVo16?g_st=aw" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Church location map"></iframe>
+              <iframe
+                title="Kairos Faith Ministry International location"
+                src="https://www.google.com/maps?q=Koforidua%20Okorase&output=embed"
+                loading="lazy">
+              </iframe>
             </div>
           </article>
         </div>
@@ -102,8 +120,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="image.png" alt="Kairos Faith Ministry International logo" />
-          
+          <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
+        </div>
         <div>
           <h4>Quick Links</h4>
           <div class="footer-links">
@@ -114,10 +132,11 @@
         </div>
         <div>
           <h4>Social</h4>
-          <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
+          <div class="footer-links social-links">
+            <a class="instagram-link" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a class="facebook-link" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a class="youtube-link" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a class="x-link" href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
           </div>
         </div>
         <div>
@@ -129,47 +148,84 @@
         </div>
       </div>
       <div class="copyright">
-        <p>© 2026 Kairos Faith Ministry International. “God's time is my time.”</p>
+        <p>© 2026 Kairos Faith Ministry International. “God's time, is my time.”</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    navToggle?.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+const submitButton = document.getElementById('submitButton');
+
+navToggle?.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+
+contactForm?.addEventListener('submit', async (event) => {
+
+  event.preventDefault();
+
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
+  }
+
+  const data = new FormData(contactForm);
+
+  const payload = {
+    name: data.get('name'),
+    email: data.get('email'),
+    phone: data.get('phone'),
+    message: data.get('message'),
+    website: data.get('website')
+  };
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending…';
+  formMessage.textContent = '';
+  formMessage.className = 'form-message';
+
+  try {
+
+    const response = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
     });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
-    const contactForm = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
-    contactForm?.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const data = new FormData(contactForm);
-      const name = data.get('name').toString().trim();
-      const email = data.get('email').toString().trim();
-      const message = data.get('message').toString().trim();
-      if (!name || !email || !message) {
-        formMessage.textContent = 'Please complete the required fields.';
-        formMessage.style.color = '#b42318';
-        return;
-      }
-      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!validEmail) {
-        formMessage.textContent = 'Please enter a valid email address.';
-        formMessage.style.color = '#b42318';
-        return;
-      }
-      formMessage.textContent = 'Thank you for reaching out. We will be in touch shortly.';
-      formMessage.style.color = '#1a8f5b';
-      contactForm.reset();
-    });
+
+    if (!response.ok) throw new Error('The server could not process the message.');
+
+    const result = await response.json();
+
+    formMessage.textContent = result.message;
+    formMessage.classList.add('success');
+
+    contactForm.reset();
+
+  } catch (error) {
+
+    formMessage.textContent = 'Could not send your message. Please try WhatsApp or call us instead.';
+    formMessage.classList.add('error');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send Message';
+  }
+});
+
   </script>
 </body>
 </html>

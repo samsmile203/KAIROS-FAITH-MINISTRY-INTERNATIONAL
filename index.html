@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,10 +17,10 @@
   <header class="navbar">
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Kairos Faith Ministry International home">
-        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
         <span>Kairos Faith Ministry International</span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">&#9776;</button>
          <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -40,7 +41,6 @@
       </div>
       <div class="container hero-content">
         <div class="reveal">
-          <div class="hero-badge">Faith • Hope • Love</div>
           <h1>Welcome to Kairos Faith Ministry International</h1>
           <p>Transforming lives through the power of God's Word, worship, prayer, and love. A modern, compassionate church family committed to spiritual growth and excellence.</p>
           <div class="hero-actions">
@@ -54,7 +54,7 @@
     <section class="story-section">
       <div class="container story-layout">
         <div class="story-photos reveal">
-          <img src="image/both.jpeg" alt="Pastor Isaac Kansan and Lady Sarah Kansan" class="story-photo story-photo-full" />
+          <img src="image/both1.jpeg" alt="Pastor Isaac Kansan and Lady Sarah Kansan" class="story photo" />
         </div>
 
         <div class="story-copy reveal">
@@ -71,11 +71,11 @@
 
           <p>As we grow, we look forward to planting daughter churches in the near future, extending the Gospel and impacting communities for Christ.</p>
 
-          <p class="story-closing">Kairos Faith Ministry International — Where Lives Are Transformed.</p>
+          <p class="story-closing">Kairos Faith Ministry International.God's Time, Is My Time.</p>
         </div>
       </div>
 
-      <div class="container promo-row reveal">
+      <div class="container promo row reveal">
         <div class="promo-card">
           <img src="image/theme.jpeg" alt="Theme of the year" />
         </div>
@@ -93,34 +93,31 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
           <h3>Kairos Faith Ministry International</h3>
-          <p>God's Time Is My Time.</p>
+          <p>God's Time, Is My Time.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
           <div class="footer-links">
             <a href="about.html">About</a>
-            <a href="#ministries">Ministries</a>
+            <a href="about.html#about">Ministries</a>
             <a href="events.html">Events</a>
             <a href="giving.html">Give</a>
           </div>
         </div>
         <div>
           <h4>Social</h4>
-          <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
-            <a href="#">X</a>
+          <div class="footer-links social-links">
+            <a class="instagram-link" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a class="facebook-link" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a class="youtube-link" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a class="x-link" href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
           </div>
         </div>
         <div>
-          <h4>Newsletter</h4>
-          <form class="newsletter">
-            <input type="email" placeholder="Email address" />
-            <button class="btn btn-gold" type="button">Subscribe</button>
-          </form>
+          <h4>Stay Connected</h4>
+          <p class="footer-connect">Follow us on social media or send us a message on WhatsApp.</p>
         </div>
       </div>
       <div class="copyright">
@@ -128,6 +125,14 @@
       </div>
     </div>
   </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/233500079389" target="_blank" rel="noopener noreferrer" aria-label="Chat with Kairos Faith Ministry International on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <span>WhatsApp</span>
+  </a>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" aria-hidden="true">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  </button>
   
   
 
@@ -143,6 +148,19 @@
     navToggle?.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    const updateBackToTop = () => {
+      const isVisible = window.innerWidth <= 720 && window.scrollY > 360;
+      backToTop?.classList.toggle('visible', isVisible);
+      backToTop?.setAttribute('aria-hidden', String(!isVisible));
+    };
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    window.addEventListener('resize', updateBackToTop);
+    updateBackToTop();
+    backToTop?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     const observer = new IntersectionObserver((entries) => {
@@ -177,10 +195,14 @@
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
-      document.getElementById('days').textContent = String(days).padStart(2, '0');
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+      if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+      if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+      if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
     }, 1000);
   </script>
 </body>

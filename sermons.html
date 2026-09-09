@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
   
     
@@ -18,10 +19,10 @@
   <header class="navbar">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Kairos Faith Ministry International home">
-        <img src="image.png" alt="Kairos Faith Ministry International logo" />
+        <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
         <span>Kairos Faith Ministry International</span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">&#9776;</button>
             <nav class="nav-links" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -85,38 +86,17 @@
             <div class="audio-player">
               <label for="latestAudio" class="audio-label">Listen to the latest message</label>
               <audio id="latestAudio" controls preload="metadata">
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+                
                 Your browser does not support the audio element.
               </audio>
             </div>
           </article>
-          <div class="sermon-list">
-            <div class="sermon-item glass" data-category="prayer" data-title="Praying With Power" data-speaker="Pastor Grace Okafor">
-              <div>
-                <strong>Praying With Power</strong>
-                <p>Pastor Grace Okafor</p>
-              </div>
-              <span>Prayer</span>
-            </div>
-            <div class="sermon-item glass" data-category="worship" data-title="The Presence of God" data-speaker="Pastor Daniel King">
-              <div>
-                <strong>The Presence of God</strong>
-                <p>Pastor Daniel King</p>
-              </div>
-              <span>Worship</span>
-            </div>
-            <div class="sermon-item glass" data-category="growth" data-title="Growing Through Seasons" data-speaker="Pastor Joy Adebayo">
-              <div>
-                <strong>Growing Through Seasons</strong>
-                <p>Pastor Joy Adebayo</p>
-              </div>
-              <span>Growth</span>
-            </div>
-            <div class="sermon-item glass" data-category="faith" data-title="Faith That Moves Mountains" data-speaker="Pastor Samuel Adeyemi">
-              <div>
-                <strong>Faith That Moves Mountains</strong>
-                <p>Pastor Samuel Adeyemi</p>
-              </div>
+         
+                <p></p>
+                <div class="meta-list">
+                  <span>7 July 2026</span>
+                  <span>Prayer</span>
+                  <span>42 min</span>
               <span>Faith</span>
             </div>
           </div>
@@ -128,7 +108,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="image.png" alt="Kairos Faith Ministry International logo" />
+          <img src="logo.jpeg" alt="Kairos Faith Ministry International logo" />
           <h3>Kairos Faith Ministry International</h3>
           <p>Faith, excellence, peace, and hope for every generation.</p>
         </div>
@@ -142,10 +122,11 @@
         </div>
         <div>
           <h4>Social</h4>
-          <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
+          <div class="footer-links social-links">
+            <a class="instagram-link" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a class="facebook-link" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a class="youtube-link" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a class="x-link" href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
           </div>
         </div>
         <div>
