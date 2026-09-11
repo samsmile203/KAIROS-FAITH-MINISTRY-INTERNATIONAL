@@ -254,10 +254,10 @@ button, input, textarea, select { font: inherit; }
 
 
 .hero {
-  position: relative; min-height: 100vh; display: flex; align-items: center; padding: 5rem 0 4rem; background: url('images/photo1.jpeg') center/cover no-repeat; color: white; isolation: isolate; overflow: hidden;
+  position: relative; min-height: 100vh; display: flex; align-items: center; padding: 5rem 0 4rem; background: url('images/front.jpeg') center 30%/cover no-repeat; color: white; isolation: isolate; overflow: hidden;
 }
-.hero::before { content: ''; position: absolute; inset: 0; background: rgba(98, 29, 226, 0.45); pointer-events: none; }
-.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(87, 9, 197, 0.55) 0%, rgba(0,0,0,0.18) 45%, rgba(114, 13, 191, 0.35) 100%); pointer-events: none; }
+.hero::before { content: ''; position: absolute; inset: 0; background: rgba(98, 29, 226, 0.25); pointer-events: none; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(87, 9, 197, 0.3) 0%, rgba(0,0,0,0.08) 45%, rgba(114, 13, 191, 0.18) 100%); pointer-events: none; }
 .hero-content { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; position: relative; z-index: 1; }
 .hero-badge { width: fit-content; padding: 0.5rem 0.9rem; border-radius: 999px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.2); font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4.8vw, 4.4rem); line-height: 1.1; margin-bottom: 1rem; }
